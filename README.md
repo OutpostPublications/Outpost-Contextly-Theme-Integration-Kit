@@ -10,6 +10,8 @@ To setup Outpost and Contextly integration, you will need to download your theme
 
 4. Open the outpost_api_key.hbs file in a text editor. Go to your Outpost Control Center. In the top line, click Account -> Core Connections. Copy your Outpost API key and replace "Sample_Outpost_API_Key" in the outpost_api_key.hbs file. Make sure there is not any extra lines in the file. Then save the file.
 
+5. Open the outpost_domain_name.hbs file in a text editor. Go to your Outpost Control Center. In the top line, click Account -> Core Connections. Copy your Outpost Domain Name and replace "example" in the outpost_domain_name.hbs file. Make sure there is not any extra lines in the file. Then save the file.
+
 5. Add the following code into your theme's `default.hbs` file right under {{ghost_foot}}
 
 ```
