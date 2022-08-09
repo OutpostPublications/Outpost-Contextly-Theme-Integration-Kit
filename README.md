@@ -1,6 +1,8 @@
 # Usage
 
-To setup Outpost and Contextly integration, you will need to download your theme
+To setup the integration with Outpost and Contextly on your Ghost site, you will need to add a few files to your theme. If you are not hosting your site on Github, you will need to download your theme.
+
+Non-Github Method:
 
 1. Download the Outpost ThemeStarterKit files and unzip them.
 
@@ -8,9 +10,9 @@ To setup Outpost and Contextly integration, you will need to download your theme
 
 3. Copy the folder `partials/integrations` from the ThemeStarterKit to the folder `partials` in your theme.
 
-4. Open the outpost_api_key.hbs file in a text editor. Go to your Outpost Control Center. In the top line, click Account -> Core Connections. Copy your Outpost API key and replace "Sample_Outpost_API_Key" in the outpost_api_key.hbs file. Make sure there is not any extra lines in the file. Then save the file.
+4. Open the outpost_api_key.hbs file in a text editor. Go to your <a hre="https://admin.outpost.pub">Outpost Control Center</a>. Click the Account tab then go to Core Connections. Copy your Outpost API key. Go back to your text editor and replace "Sample_Outpost_API_Key" in the outpost_api_key.hbs file. Make sure there are no extra lines in the file. Then save the file.
 
-5. Open the outpost_domain_name.hbs file in a text editor. Go to your Outpost Control Center. In the top line, click Account -> Core Connections. Copy your Outpost Domain Name and replace "example" in the outpost_domain_name.hbs file. Make sure there is not any extra lines in the file. Then save the file.
+5. Open the outpost_domain_name.hbs file in a text editor. Go to your <a hre="https://admin.outpost.pub">Outpost Control Center</a>again. Click the tab Account then Core Connections. Copy your Outpost Domain Name. Go back to your text editor and replace "example" in the outpost_domain_name.hbs file. Make sure there are no extra lines in the file. Then save the file.
 
 5. Add the following code into your theme's `default.hbs` file right under {{ghost_foot}}
 
@@ -19,7 +21,7 @@ To setup Outpost and Contextly integration, you will need to download your theme
    {{> integrations/contextly}}
 ``` 
 
-6. Add the main Contextly module in the post file in your theme where you would like it to display, typically right after the end of the post and before the comments or author bio box. This file is typically called post.hbs. To place the module, paste the code below under the {content} section. 
+6. To display the main Contextly recommendation module at the end of posts, you need to add the main Contextly module in the post file in your theme where you would like it to display. This is typically right after the end of the post and before the comments or author bio box. This file is typically called post.hbs. To place the module, paste the code below under the {content} section and above the comments or author bio. 
 
 If your theme has multiple post templates (like Biron Theme's Nikko theme), you will need to put this code in each post template you want it to appear in.
 
@@ -27,6 +29,17 @@ If your theme has multiple post templates (like Biron Theme's Nikko theme), you 
     {{> integrations/contextly-module}}
 ```
 
-7. Zip all your theme files and then upload the zip file in Ghost as a new theme. Set it as active and you will be good to go.
+7. Zip all your theme files (right-click on the folder and choose Compress). Now upload the zip file in Ghost as a new theme. Set it as active and you will be good to go.
+
+Github method:
+
+1. Open your theme in either your local Github editor or on the website.
+2. Download the Outpost ThemeStarterKit files and unzip them.
+3. Add these to your /partials folder. If doing this locally, copy the folder `partials/integrations` from the ThemeStarterKit to the folder `partials` in your theme.
+4. Open the outpost_api_key.hbs file. Go to your <a hre="https://admin.outpost.pub">Outpost Control Center</a>. Click the Account tab then go to Core Connections. Copy your Outpost API key. Replace "Sample_Outpost_API_Key" in the outpost_api_key.hbs file. Make sure there are no extra lines in the file. Then save your changes.
+5. Open the outpost_domain_name.hbs file. Go to your <a hre="https://admin.outpost.pub">Outpost Control Center</a>again. Click the tab Account then Core Connections. Copy your Outpost Domain Name. Replace "example" in the outpost_domain_name.hbs file. Make sure there are no extra lines in the file. Then save your changes.
+6. Commit your changes, open a pull request and approve them.
+7. If you are using Actions to connect your theme to Ghost, check the Action tab to ensure the theme change was accepted by Ghost. If not using Actions, download your theme as a zip file, upload it to Ghost and make it active.
+
 
 If you run into any issues, please write us at support@outpost.pub.
