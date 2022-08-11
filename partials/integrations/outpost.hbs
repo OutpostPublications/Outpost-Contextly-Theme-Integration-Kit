@@ -1,7 +1,7 @@
 <script>
   const OutpostPub = {
-    apiDomain: "https://{{domain}}",
-    apiKey: "{{apiKey}}",
+    apiDomain: "{{> integrations/outpost-domain-name}}",
+    apiKey: "{{> integrations/outpost-api-key}}",
     siteName: "{{@site.title}}",
     memberId: "{{@member.uuid}}",
     memberEmail: "{{@member.email}}",

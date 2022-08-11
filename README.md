@@ -10,14 +10,14 @@ Non-Github Method:
 
 3. Copy the folder `partials/integrations` from the ThemeStarterKit to the folder `partials` in your theme.
 
-4. Open the outpost_api_key.hbs file in a text editor. Go to your [Outpost Control Center](https://admin.outpost.pub). Click the Account tab then go to Core Connections. Copy your Outpost API key. Go back to your text editor and replace "Sample_Outpost_API_Key" in the outpost_api_key.hbs file. Make sure there are no extra lines in the file. Then save the file.
+4. Open the outpost-api-key.hbs file in a text editor. Go to your [Outpost Control Center](https://admin.outpost.pub). Click the Account tab then go to Core Connections. Copy your Outpost API key. Go back to your text editor and replace "Sample_Outpost_API_Key" in the outpost-api-key.hbs file. Make sure there are no extra lines in the file. Then save the file.
 
-5. Open the outpost_domain_name.hbs file in a text editor. Go to your [Outpost Control Center](https://admin.outpost.pub) again. Click the tab Account then Core Connections. Copy your Outpost Domain Name. Go back to your text editor and replace "example" in the outpost_domain_name.hbs file. Make sure there are no extra lines in the file. Then save the file.
+5. Open the outpost-domain-name.hbs file in a text editor. Go to your [Outpost Control Center](https://admin.outpost.pub) again. Click the tab Account then Core Connections. Copy your Outpost Domain Name. Go back to your text editor and replace "example" in the outpost-domain-name.hbs file. Make sure there are no extra lines in the file. Then save the file.
 
 5. Add the following code into your theme's `default.hbs` file right under {{ghost_foot}}
 
 ```
-   {{> integrations/outpost apiKey="OUTPOST_API_KEY"}}
+   {{> integrations/outpost}}
    {{> integrations/contextly}}
 ``` 
 
