@@ -5,7 +5,7 @@ To setup the integration with Outpost and Contextly on your Ghost site, you will
 2) sign up with Contextly for Ghost at https://ghost.contextly.com/login
 3) Add a few files to your theme that activate both
 
-This tutorial walks you through #3
+This tutorial walks you through #3, the process of modifying your theme.
 
 If you are not hosting your site on Github, you will need to download your theme.
 
