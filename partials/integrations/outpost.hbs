@@ -13,6 +13,14 @@
         {{/foreach}}
       ],
     {{/if}}
+    {{#is "post"}}
+      {{#post}}
+        post: {
+          id: "{{id}}",
+          tags: ["{{tags visibility="all" separator="\", \"" autolink="false"}}"],
+        }
+      {{/post}}
+    {{/is}}
   }
 </script>
 <script src="https://assets.outpost.pub/assets/v2/js/outpost-pub.js"></script>
