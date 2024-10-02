@@ -26,7 +26,11 @@
                 </div>
                 <div class="field">
                     <label>Message:</label>
-                    <textarea data-contact-message placeholder="Email your message" required="" rows="4"></textarea>
+                    <textarea data-contact-message placeholder="Email your message" required="" rows="4" maxlength="1000"></textarea>
+                    <div class="outpost-progress">
+                        <div class="outpost-progress-bar"></div>
+                        <p class="outpost-remaining-chars"></p>
+                    </div>
                 </div>
 
                 <button class="outpost-contact-submit" type="submit">Send</button>
