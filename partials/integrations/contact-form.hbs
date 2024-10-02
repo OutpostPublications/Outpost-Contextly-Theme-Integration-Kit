@@ -3,11 +3,11 @@
         <div class="outpost-contact-content">
 
             <form data-outpost-contact-form class="outpost-contact-form">
-                <div class="outpost-message-success">Thanks, your request submitted successfully.</div>
+                <div class="outpost-message-success" style="display: none;">Thanks, your request submitted successfully.</div>
                 <div class="outpost-message-error"></div>
                 <div class="field">
                     <label>Name:</label>
-                    <input data-contact-name type="text" placeholder="Name" required="">
+                    <input data-contact-name type="text" placeholder="Name">
                 </div>
                 <div class="field">
                     <label>Email:</label>
@@ -15,8 +15,8 @@
                 </div>
                 <div class="field">
                     <label>Subject:</label>
-                    <select data-contact-subject required="">
-                        <option value="">Select topic</option>
+                    <select data-contact-subject>
+                        <option value="other">Select topic</option>
                         <option value="Subscriptions">Subscriptions</option>
                         <option value="Store Purchases">Store Purchases</option>
                         <option value="General Inquiry">General Inquiry</option>
