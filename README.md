@@ -43,8 +43,8 @@ Github method:
 1. Open your theme in either your local Github editor or on the website.
 2. Download the Outpost ThemeStarterKit files and unzip them.
 3. Add these to your /partials folder. If doing this locally, copy the folder `partials/integrations` from the ThemeStarterKit to the folder `partials` in your theme.
-4. Open the outpost_api_key.hbs file. Go to your <a hre="https://admin.outpost.pub">Outpost Control Center</a>. Click the Account tab then go to Core Connections. Copy your Outpost API key. Replace "Sample_Outpost_API_Key" in the outpost_api_key.hbs file. Do this locally via a text editor, not via the online Github editor, which always adds a space somehow. Make sure there are no extra lines in the file. Then save your changes.
-5. Open the outpost_domain_name.hbs file. Go to your <a hre="https://admin.outpost.pub">Outpost Control Center</a>again. Click the tab Account then Core Connections. Copy your Outpost Domain Name. Replace "example" in the outpost_domain_name.hbs file. We also recommend doing this locally. Make sure there are no extra lines in the file. Then save your changes.
+4. Open the outpost_api_key.hbs file. Go to your <a href="https://admin.outpost.pub">Outpost Control Center</a>. Click the Account tab then go to Core Connections. Copy your Outpost API key. Replace "Sample_Outpost_API_Key" in the outpost_api_key.hbs file. Do this locally via a text editor, not via the online Github editor, which always adds a space somehow. Make sure there are no extra lines in the file. Then save your changes.
+5. Open the outpost_domain_name.hbs file. Go to your <a href="https://admin.outpost.pub">Outpost Control Center</a>again. Click the tab Account then Core Connections. Copy your Outpost Domain Name. Replace "example" in the outpost_domain_name.hbs file. We also recommend doing this locally. Make sure there are no extra lines in the file. Then save your changes.
 6. Add the following code into your theme's `default.hbs` file right under {{ghost_foot}}
 
 ```
