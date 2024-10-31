@@ -1,9 +1,10 @@
 # Usage
 
 To setup the integration with Outpost and Contextly on your Ghost site, you will need to:
-1) sign up with Outpost and be moved by Outpost to a Luna+ plan
-2) sign up with Contextly for Ghost at https://ghost.contextly.com/login
-3) Add a few files to your theme that activate both
+1) Sign up with Outpost and be moved by Outpost to a Luna+ plan [Outpost](https://admin.outpost.pub)
+2) Sign up with Contextly for Ghost at https://ghost.contextly.com/login
+3) Add your Contextly API key to Outpost's integrations to make it simpler to login (Contextly account page, copy the API key, go to Outpost then to Integrations, choose Contextly, paste the API key and hit Save. Then you can login to Contextly from Outpost).
+4) Add a few files to your theme that activate both
 
 This tutorial walks you through #3, the process of modifying your theme.
 
@@ -30,13 +31,16 @@ Non-Github Method:
 
 7. To display the main Contextly recommendation module at the end of posts, you need to add the main Contextly module in the post file in your theme where you would like it to display. This is typically right after the end of the post and before the comments or author bio box. This file is typically called post.hbs. To place the module, paste the code below under the {content} section and above the comments or author bio. 
 
-If your theme has multiple post templates (like Biron Theme's Nikko theme), you will need to put this code in each post template you want it to appear in.
+If your theme has multiple post templates (like Biron Theme's Nikko theme), you will need to put this code in each post template you want it to appear in. These files generally start with "custom".
+
+Alternatively, if your theme has a partial for this function e.g. related.hbs in the partials folder, you can comment out the existing code and paste the code below there instead.
 
 ```
     {{> integrations/contextly-module}}
 ```
 
 8. Zip all your theme files (right-click on the folder and choose Compress). Now upload the zip file in Ghost as a new theme. Set it as active and you will be good to go.
+9. If recommendations do not show up in 10 minutes, log into Contextly, go to Recommendations and Refresh all. If you copied over the Contextly API key into Outpost, you can login to Contextly via Outpost under Integrations.
 
 Github method:
 
@@ -56,11 +60,14 @@ Github method:
 
 If your theme has multiple post templates (like Biron Theme's Nikko theme), you will need to put this code in each post template you want it to appear in. These files generally start with "custom".
 
+Alternatively, if your theme has a partial for this function e.g. related.hbs in the partials folder, you can comment out the existing code and paste the code below there instead.
+
 ```
     {{> integrations/contextly-module}}
 ```
 8. Commit your changes, open a pull request and approve them.
 9. If you are using Actions to connect your theme to Ghost, check the Action tab to ensure the theme change was accepted by Ghost. If not using Actions, download your theme as a zip file, upload it to Ghost and make it active.
+10. If recommendations do not show up in 10 minutes, log into Contextly, go to Recommendations and Refresh all.
 
 
 If you run into any issues, please write us at support@outpost.pub.
