@@ -1,26 +1,26 @@
 # Usage
 
-To setup the integration with Outpost and Contextly on your Ghost site, you will need to:
-1) Sign up with Outpost and be moved by Outpost to a Luna+ plan [Outpost](https://admin.outpost.pub)
-2) Sign up with Contextly for Ghost at https://ghost.contextly.com/login
+To setup the integration with Outpost and optionally Contextly on your Ghost site, you will need to:
+1) Sign up with Outpost and be moved by Outpost to a Luna (or higher) plan [Outpost](https://admin.outpost.pub)
+2) Sign up with Contextly for Ghost at https://ghost.contextly.com/login (Optional)
 3) Add your Contextly API key to Outpost's integrations to make it simpler to login (Contextly account page, copy the API key, go to Outpost then to Integrations, choose Contextly, paste the API key and hit Save. Then you can login to Contextly from Outpost).
-4) Add a few files to your theme that activate both
+4) Add a few files to your theme that activate Outpost and, optionally, Contextly
 
-This tutorial walks you through #3, the process of modifying your theme.
+This tutorial walks you through #4, the process of modifying your theme.
 
 If you are not hosting your site on Github, you will need to download your theme.
 
 Non-Github Method:
 
-1. Download the Outpost ThemeStarterKit files and unzip them.
+1. Download the Outpost TThemeStarterKit files from Github and unzip them.
 
-2. Download your theme from Ghost and unzip it.
+2. Download your theme from Ghost and unzip it. We recommend making a backup copy of the files or the zip just in case. Backups never hurt.
 
 3. Copy the folder `partials/integrations` from the ThemeStarterKit to the folder `partials` in your theme.
 
-4. Open the outpost-api-key.hbs file in a text editor. Go to your [Outpost Control Center](https://admin.outpost.pub). Click the Account tab then go to Core Connections. Copy your Outpost API key. Go back to your text editor and replace "Sample_Outpost_API_Key" in the outpost-api-key.hbs file. Make sure there are no extra lines in the file. Then save the file.
+4. Open the outpost-api-key.hbs file in a text editor. Go to your [Outpost Control Center](https://admin.outpost.pub). Click the Account tab then go to Core Connections. Copy your Outpost API key. Go back to your text editor and replace "Sample_Outpost_API_Key" in the outpost-api-key.hbs file with this key. Make sure there are no extra lines or spaces in the file. Save the file.
 
-5. Open the outpost-domain-name.hbs file in a text editor. Go to your [Outpost Control Center](https://admin.outpost.pub) again. Click the tab Account then Core Connections. Copy your Outpost Domain Name. Go back to your text editor and replace "example" in the outpost-domain-name.hbs file. Make sure there are no extra lines in the file. Then save the file.
+5. Open the outpost-domain-name.hbs file in a text editor. Go to your [Outpost Control Center](https://admin.outpost.pub) again. Click the tab Account then Core Connections. Copy your Outpost Domain Name. Go back to your text editor and replace "example" in the outpost-domain-name.hbs file with this domain name. Make sure there are no extra lines or spaces in the file. Then save the file.
 
 6. Add the following code into your theme's `default.hbs` file right under {{ghost_foot}}
 
@@ -28,16 +28,18 @@ Non-Github Method:
    {{> integrations/outpost}}
    {{> integrations/contextly}}
 ``` 
+If you are not using Contextly, you can omit the Contextly line.
 
-7. To display the main Contextly recommendation module at the end of posts, you need to add the main Contextly module in the post file in your theme where you would like it to display. This is typically right after the end of the post and before the comments or author bio box. This file is typically called post.hbs. To place the module, paste the code below under the {content} section and above the comments or author bio. 
+7. To display the main Contextly recommendation module at the end of posts, you need to add the main Contextly module in the post file(s) in your theme where you would like it to display. This is typically right after the end of the post and before the comments or author bio box. This file is typically called post.hbs. To place the module, paste the code below under the {content} section and above the comments or author bio. 
 
-If your theme has multiple post templates (like Biron Theme's Nikko theme), you will need to put this code in each post template you want it to appear in. These files generally start with "custom".
+If your theme has multiple post templates (like Bright Theme's Nikko or Maali theme), you will need to put this code in each post template you want it to appear in. These files generally start with "custom-post".
 
-Alternatively, if your theme has a partial for this function e.g. related.hbs in the partials folder, you can comment out the existing code and paste the code below there instead.
+Alternatively, if your theme has a partial for showing content recommendations, e.g. related.hbs in the partials folder, you can comment out the existing code and paste the code below there instead.
 
 ```
     {{> integrations/contextly-module}}
 ```
+That replaces the default theme recommendations with Contextly's.
 
 8. Zip all your theme files (right-click on the folder and choose Compress). Now upload the zip file in Ghost as a new theme. Set it as active and you will be good to go.
 9. If recommendations do not show up in 10 minutes, log into Contextly, go to Recommendations and Refresh all. If you copied over the Contextly API key into Outpost, you can login to Contextly via Outpost under Integrations.
