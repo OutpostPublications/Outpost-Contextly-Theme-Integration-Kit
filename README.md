@@ -12,7 +12,7 @@ If you are not hosting your site on Github, you will need to download your theme
 
 Non-Github Method:
 
-1. Download the Outpost TThemeStarterKit files from Github and unzip them.
+1. Download the Outpost ThemeStarterKit files from Github and unzip them.
 
 2. Download your theme from Ghost and unzip it. We recommend making a backup copy of the files or the zip just in case. Backups never hurt.
 
