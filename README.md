@@ -1,9 +1,9 @@
 # Usage
 
 To setup the integration with Outpost and optionally Contextly on your Ghost site, you will need to:
-1) Sign up with Outpost and be moved by Outpost to a Luna (or higher) plan [Outpost](https://admin.outpost.pub)
-2) Sign up with Contextly for Ghost at https://ghost.contextly.com/login (Optional)
-3) Add your Contextly API key to Outpost's integrations to make it simpler to login (Contextly account page, copy the API key, go to Outpost then to Integrations, choose Contextly, paste the API key and hit Save. Then you can login to Contextly from Outpost).
+1) Sign up with Outpost and be moved by Outpost to a Luna (or higher) plan [Outpost](https://admin.outpost.pub). Check in Outpost under Integrations to make sure the integration is on. If it is, not, activate it.
+Or if you are just integrating Contextly, sign up with Contextly for Ghost at https://ghost.contextly.com/login (Optional)
+3) Add your Contextly API key to Outpost's integrations to make it simpler to login. Go to the Contextly account page, copy the API key, go to Outpost then to Integrations, choose Contextly, paste the API key and hit Save. Then you can login to Contextly from Outpost.
 4) Add a few files to your theme that activate Outpost and, optionally, Contextly
 
 This tutorial walks you through #4, the process of modifying your theme.
